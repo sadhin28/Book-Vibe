@@ -1,7 +1,7 @@
 const Book = ({ data }) => {
     const { bookName, author, image, } = data;
     return (
-        <div className=" border border-gray-300 card w-[375px] bg-[1px	Inside
+        <div className=" border border-gray-300 card md:w-[385px] w-[400px] bg-[1px	Inside
             #13131326] w-76 shadow-sm">
             <figure className=" border border-gray-500 rounded-xl m-5 bg-gray-300 px-5 pt-5 pb-5">
                 <img
