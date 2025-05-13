@@ -9,6 +9,7 @@ import App from './App.jsx'
 import Root from './Components/Root/Root.jsx';
 import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 import Home from './Components/Home/Home.jsx';
+import Dashboard from './Components/Dashboard/Dashboard.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,9 +23,10 @@ const router = createBrowserRouter([
       },
       {
         path:"dashboard",
-        element:
+        element:<Dashboard></Dashboard>
         
-      }
+      },
+     
     ]
 
   },
