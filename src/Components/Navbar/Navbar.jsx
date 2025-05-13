@@ -11,16 +11,16 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="gird gap-3 menu duration-1000 menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="text-xl gird gap-3 menu duration-1000 menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <NavLink to="/">Home</NavLink>
                          <NavLink to="/booklist">Listed Books</NavLink>
                         <NavLink to="/dashboard">Pages to Read</NavLink>
                     </ul>
                 </div>
-                <a className=" btn-ghost text-xl">Book Vibe</a>
+                <a className=" btn-ghost text-xl md:text-2xl font-bold">Book Vibe</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 flex gap-5 items-center ">
+                <ul className="menu text-xl menu-horizontal px-1 flex gap-5 items-center ">
                     
                         <NavLink to="/">Home</NavLink>
                         <NavLink to="/booklist">Listed Books</NavLink>
@@ -29,7 +29,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <button>Sign In</button>
+                <button>Sign Up</button>
             </div>
         </div>
 
