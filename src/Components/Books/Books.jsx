@@ -1,8 +1,16 @@
+import Book from "../Book/Book";
 
-const Books = () => {
+const Books = ({bookData}) => {
+   
     return (
         <div>
-            <h1 className="text-2xl font-black text-center">Books</h1>
+            <h1 className="text-2xl font-black text-center">Books: {bookData.length}</h1>
+        
+            <div>
+                {
+                  bookData.map(data=><Book data={data} ></Book>) 
+                }
+            </div>
         </div>
     );
 };
