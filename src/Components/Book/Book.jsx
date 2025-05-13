@@ -1,5 +1,5 @@
 const Book = ({ data }) => {
-    const { bookName, author, image, } = data;
+    const { bookName, image } = data;
     return (
         <div className=" border border-gray-300 card md:w-[385px] w-[400px] bg-[1px	Inside
             #13131326] w-76 shadow-sm">
