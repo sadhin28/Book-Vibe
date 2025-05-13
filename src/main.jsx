@@ -11,6 +11,8 @@ import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 import Home from './Components/Home/Home.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import Booklist from './Components/Booklist/Booklist.jsx';
+import SignIn from './Components/SignIn/SignIn.jsx';
+import SignUp from './Components/SignUp/SignUp.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +32,15 @@ const router = createBrowserRouter([
       {
         path:"booklist",
         element:<Booklist></Booklist>
-      }
+      },
+      {
+        path:"/sign-in",
+        element:<SignIn></SignIn>
+      },
+      {
+        path:"/sign-up",
+        element:<SignUp></SignUp>
+      },
      
     ]
 
