@@ -1,12 +1,12 @@
 const Book = ({ data }) => {
     const { bookName, author, image, } = data;
     return (
-        <div className=" border card w-[300px] bg-base-100 w-76 shadow-sm">
-            <figure className=" border rounded-xl m-5 bg-gray-300 px-5 pt-5 pb-5">
+        <div className=" border border-gray-300 card w-[375px] bg-base-100 w-76 shadow-sm">
+            <figure className=" border border-gray-500 rounded-xl m-5 bg-gray-300 px-5 pt-5 pb-5">
                 <img
                     src={image}
                     alt="Books"
-                    className="rounded-xl w-full  h-70  " />
+                    className="rounded-xl w-full  h-80  " />
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Card Title</h2>

@@ -6,7 +6,7 @@ const Books = ({bookData}) => {
         <div>
             <h1 className="text-2xl font-black text-center">Books: {bookData.length}</h1>
         
-            <div>
+            <div className="mt-10">
                 {
                   bookData.map(data=><Book data={data} ></Book>) 
                 }
