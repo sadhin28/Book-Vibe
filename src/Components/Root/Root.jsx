@@ -1,9 +1,10 @@
 import React from 'react';
+import Navbar from '../Navbar/Navbar';
 
 const Root = () => {
     return (
         <div>
-            <h1>Root App</h1>
+            <Navbar></Navbar>
         </div>
     );
 };
