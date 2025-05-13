@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import bannerImg from '../../assets/books.jpg'
 const Banner = () => {
     return (
-        <div className="hero bg-base-200 min-h-150">
-            <div className="hero-content flex-col lg:flex-row-reverse lg:gap-60">
+        <div className="hero rounded-2xl bg-base-200 min-h-150">
+            <div className="hero-content flex-col lg:flex-row-reverse lg:gap-50  ">
                 <img
                     src={bannerImg}
                     className="max-w-sm rounded-lg shadow-2xl"
@@ -12,7 +13,7 @@ const Banner = () => {
                     <p className="py-6">
                        
                     </p>
-                    <button className=" py-6 btn btn-primary">Get Started</button>
+                    <Link to="/booklist"><button className="bg-[#23BE0A] text-white text-xl border-none btn btn-primary">View The List</button></Link>
                 </div>
             </div>
         </div>
