@@ -18,7 +18,7 @@ const Booklist = () => {
         const storedListint = storeReadlist.map(id => parseInt(id));
         const booklist = allBooks.filter(book => storedListint.includes(book.bookId))
         setredlist(booklist)
-        console.log(readlist)
+       
     }, [])
     return (
         <div className='mb-10'>
@@ -32,8 +32,10 @@ const Booklist = () => {
                 <TabPanel className='mt-10'>
                    
                     <div className='px-2 grid gap-5'>
+                         
                         {
-                            readlist.map(data =><ListedBook data={data} key={data.bookId}></ListedBook>)
+                            
+                            readlist.map(data =><ListedBook  data={data} key={data.bookId}></ListedBook>)
                         }
                     </div>
                 </TabPanel>
