@@ -1,7 +1,7 @@
-import React from 'react';
+import { MdContactPage } from "react-icons/md";
 
 const ListedBook = ({data}) => {
-    const {image,bookName,author,tags}=data
+    const {image,bookName,author,tags,totalPages}=data
     return (
         <div className='border-2 bg-[1px card	Inside
 #13131326]'>
@@ -18,6 +18,11 @@ const ListedBook = ({data}) => {
                                 }
                             </div>
                 </div>
+                <div className="flex mt-2 items-center gap-2">
+                    <MdContactPage />
+                    <p>Pages: {totalPages}</p>
+                </div>
+                
                 <div className='divider'></div>
                </div>
             </div>
