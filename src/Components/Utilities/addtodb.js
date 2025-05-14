@@ -1,10 +1,11 @@
 const getStoredReadList =()=>{
     const storedListr=localStorage.getItem('read-list')
     if(storedListr){
-        const storedList = JSON.parse(storedListr)
+        const storedList = JSON.parse(storedListr);
+        return storedList;
     }
     else{
-
+        return [];
     }
 }   
 
