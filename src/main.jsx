@@ -44,7 +44,8 @@ const router = createBrowserRouter([
         element:<SignUp></SignUp>
       },
       {
-        path:'books/:bookId',
+        path:'book/:bookId',
+      
         element:<BookDetail></BookDetail>
       }
      

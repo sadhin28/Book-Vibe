@@ -8,7 +8,7 @@ const Books = ({bookData}) => {
         
             <div className="md:gap-15 mt-20 md:justify-items-center justify-center grid gap-10  md:grid-cols-2 lg:grid-cols-3">
                 {
-                  bookData.map(data=><Book data={data} ></Book>) 
+                  bookData.map((data,index)=><Book key={index} data={data} ></Book>) 
                 }
             </div>
         </div>
