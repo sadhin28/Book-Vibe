@@ -14,7 +14,7 @@ const BookDetail = () => {
                 <div className=" hero-content  gap-10 flex-col lg:flex-row md:flex-row">
                     <img
                         src={image}
-                        className="max-w-sm p-10 bg-[#1313130D] rounded-lg shadow-2xl"
+                        className="max-w-sm bg-[#1313130D] rounded-lg shadow-2xl"
                     />
                     <div className="  rounded-2xl">
                         <h1 className="md:text-5xl text-2xl font-bold">{bookName}</h1>
