@@ -7,6 +7,9 @@ const BookDetail = () => {
     const bookDetails = useLoaderData();
     const book = bookDetails.find(book => book.bookId === id)
     const { author, tags, publisher, image, rating, totalPages, yearOfPublishing, bookName, category, review } = book
+    const handelMarkasRead =()=>{
+           
+    }
     return (
         <div className="">
             <div className="hero  justify-center bg-base-100 rounded-2xl  mt-10 mb-10  min-h-180">
@@ -56,8 +59,8 @@ const BookDetail = () => {
                             </div>
                             
                                <div className="flex gap-3 ">
-                                 <button className="btn btn-outline bg-[1px	Inside
-                                    #1313134D]">Read</button>
+                                 <button onClick={handelMarkasRead} className="btn btn-outline bg-[1px	Inside
+                                    #1313134D]">Mark As Read</button>
                                <button className="btn text-white bg-[#50B1C9]">Wishlist</button>
                                </div>
                         </div>
