@@ -19,7 +19,7 @@ const Book = ({ data }) => {
                 </div>
                 <h2 className="card-title">{bookName}</h2>
                 <p>{author}</p>
-                <div className="divider"></div>
+                <div className="border mt-2 mb-2 border-dashed t border-gray-500"></div>
                 <div className="flex justify-between items-center">
                    <div>
                     {category}
