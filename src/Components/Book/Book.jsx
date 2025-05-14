@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 const Book = ({ data }) => {
-    const { bookName,category, image,author,rating } = data;
+    const { bookName,category,tags, image,author,rating } = data;
     return (
         <div className="hover:translate-0.5 hover: hover:transform-border border border-gray-300 card w-[385px]  bg-[1px	Inside
             #13131326]  shadow-sm">
@@ -12,6 +12,11 @@ const Book = ({ data }) => {
                     className="rounded-xl w-full  h-80  " />
             </figure>
             <div className="card-body  ">
+                <div className="flex gap-[10px]">
+                    {
+                        tags.map(tag=><button className="bg-[#23BE0A0D] rounded-[30px] text-[16px] text-[#23BE0A] w-[125px] h-[33px]">{tag}</button>)
+                    }
+                </div>
                 <h2 className="card-title">{bookName}</h2>
                 <p>{author}</p>
                 <div className="divider"></div>
