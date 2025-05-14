@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { getStoredReadList } from '../Utilities/addtodb';
 import Book from '../Book/Book';
+import ListedBook from '../ListedBook/ListedBook';
 
 const Booklist = () => {
     const deletelocalStore=()=>{
@@ -30,9 +31,9 @@ const Booklist = () => {
 
                 <TabPanel className='mt-10'>
                    
-                    <div className='grid gap-10 md:grid-cols-2 lg:grid-cols-3 justify-items-center'>
+                    <div className='px-2 grid gap-5'>
                         {
-                            readlist.map(data => <Book key={data.bookId} data={data}></Book>)
+                            readlist.map(data =><ListedBook data={data} key={data.bookId}></ListedBook>)
                         }
                     </div>
                 </TabPanel>
