@@ -11,7 +11,7 @@ const BookDetail = () => {
     return (
         <div>
             <div className="hero  bg-base-100 rounded-2xl  mt-10 mb-10  min-h-180">
-                <div className=" hero-content px-5 gap-10 flex-col lg:flex-row md:flex-row">
+                <div className=" hero-content  gap-10 flex-col lg:flex-row md:flex-row">
                     <img
                         src={image}
                         className="max-w-sm p-10 bg-[#1313130D] rounded-lg shadow-2xl"
