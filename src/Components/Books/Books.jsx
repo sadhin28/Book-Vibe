@@ -6,7 +6,7 @@ const Books = ({bookData}) => {
         <div>
             <h1 className="text-2xl font-black text-center">Books: {bookData.length}</h1>
         
-            <div className=" gap-10 md:gap-15 mt-20 md:justify-items-center grid gap-10 justify-center md:grid-cols-2 lg:grid-cols-3">
+            <div className="md:gap-15 mt-20 justify-items-center grid gap-10  md:grid-cols-2 lg:grid-cols-3">
                 {
                   bookData.map(data=><Book data={data} ></Book>) 
                 }
