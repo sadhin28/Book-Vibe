@@ -1,5 +1,11 @@
 {
-   "rewrites":  [
-       {"source": "/(.*)", "destination": "/index.html"}
+    "routes": [
+      { "src": "/", "dest": "/" },
+      { "src": "/dashboard", "dest": "/" },
+      { "src": "/booklist", "dest": "/" },
+      { "src": "/sign-in", "dest": "/" },
+      { "src": "/sign-up", "dest": "/" },
+      { "src": "/book/:bookId", "dest": "/" }
+     
     ]
-}
+  }
