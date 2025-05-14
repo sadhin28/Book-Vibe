@@ -13,6 +13,7 @@ import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import Booklist from './Components/Booklist/Booklist.jsx';
 import SignIn from './Components/SignIn/SignIn.jsx';
 import SignUp from './Components/SignUp/SignUp.jsx';
+import BookDetail from './Components/BookDetail/BookDetail.jsx';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         path:"/sign-up",
         element:<SignUp></SignUp>
       },
+      {
+        path:'books/:bookId',
+        element:<BookDetail></BookDetail>
+      }
      
     ]
 
