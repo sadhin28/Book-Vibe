@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 const Book = ({ data }) => {
-    const { bookName, image } = data;
+    const { bookName,category, image,author,rating } = data;
     return (
         <div className="hover:translate-0.5 hover: hover:transform-border border border-gray-300 card w-[385px]  bg-[1px	Inside
             #13131326]  shadow-sm">
@@ -11,9 +13,16 @@ const Book = ({ data }) => {
             </figure>
             <div className="card-body  ">
                 <h2 className="card-title">{bookName}</h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div className="card-actions">
-                    <button className="btn btn-primary">Buy Now</button>
+                <p>{author}</p>
+                <div className="divider"></div>
+                <div className="flex justify-between items-center">
+                   <div>
+                    {category}
+                   </div>
+                   <div>
+                    
+                    {rating}
+                 </div>
                 </div>
             </div>
         </div>
