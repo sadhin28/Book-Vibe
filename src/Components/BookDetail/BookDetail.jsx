@@ -16,7 +16,7 @@ const BookDetail = () => {
                         className=" w-100  bg-[#1313130D] rounded-lg shadow-2xl"
                     />
                     <div className=" rounded-2xl">
-                        <h1 className="md:text-5xl text-2xl font-bold">{bookName}</h1>
+                        <h1 className="md:text-5xl mb-5 text-2xl font-bold">{bookName}</h1>
                         <p className="md:text-2xl text-xl">By : {author}</p>
                         <div className="divider"></div>
                         <p className="md:text-2xl text-xl">{category}</p>
