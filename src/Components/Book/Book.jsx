@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { FaStar } from "react-icons/fa";
 const Book = ({ data }) => {
     const { bookName,category, image,author,rating } = data;
     return (
@@ -19,9 +19,9 @@ const Book = ({ data }) => {
                    <div>
                     {category}
                    </div>
-                   <div>
-                    
+                   <div className="flex items-center gap-1">
                     {rating}
+                    <FaStar  className="text-yellow-300"/>
                  </div>
                 </div>
             </div>
