@@ -1,5 +1,6 @@
 import { FaStar } from "react-icons/fa";
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import { addToStoredReadList } from "../Utilities/addtodb";
 
 const BookDetail = () => {
     const { bookId } = useParams()
@@ -7,8 +8,8 @@ const BookDetail = () => {
     const bookDetails = useLoaderData();
     const book = bookDetails.find(book => book.bookId === id)
     const { author, tags, publisher, image, rating, totalPages, yearOfPublishing, bookName, category, review } = book
-    const handelMarkasRead =()=>{
-           
+    const handelMarkasRead =(id)=>{
+           addToStoredReadList(id);
     }
     return (
         <div className="">
@@ -59,7 +60,7 @@ const BookDetail = () => {
                             </div>
                             
                                <div className="flex gap-3 ">
-                                 <button onClick={handelMarkasRead} className="btn btn-outline bg-[1px	Inside
+                                 <button onClick={()=>handelMarkasRead(bookId)} className="btn btn-outline bg-[1px	Inside
                                     #1313134D]">Mark As Read</button>
                                <button className="btn text-white bg-[#50B1C9]">Wishlist</button>
                                </div>
