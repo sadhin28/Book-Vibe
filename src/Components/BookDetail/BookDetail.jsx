@@ -10,13 +10,13 @@ const BookDetail = () => {
     const { author,tags, image, bookName ,category,review} = book
     return (
         <div>
-            <div className="hero mt-10 mb-10 bg-base-200 min-h-180">
-                <div className=" px-10 hero-content gap-10 flex-col lg:flex-row md:flex-row">
+            <div className="hero  bg-base-100 rounded-2xl  mt-10 mb-10  min-h-180">
+                <div className=" hero-content px-5 gap-10 flex-col lg:flex-row md:flex-row">
                     <img
                         src={image}
-                        className=" rounded-lg shadow-2xl"
+                        className="max-w-sm p-10 bg-[#1313130D] rounded-lg shadow-2xl"
                     />
-                    <div>
+                    <div className=" p-10 rounded-2xl">
                         <h1 className="md:text-5xl text-2xl font-bold">{bookName}</h1>
                         <p className="md:text-2xl text-xl">By : {author}</p>
                         <div className="divider"></div>
