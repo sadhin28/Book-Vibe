@@ -9,8 +9,8 @@ const BookDetail = () => {
     const book = bookDetails.find(book => book.bookId === id)
     const { author,tags, image, bookName ,category,review} = book
     return (
-        <div>
-            <div className="hero px-5  bg-base-100 rounded-2xl  mt-10 mb-10  min-h-180">
+        <div className="">
+            <div className="hero   bg-base-100 rounded-2xl  mt-10 mb-10  min-h-180">
                 <div className=" hero-content  gap-10 flex-col lg:flex-row md:flex-row">
                     <img
                         src={image}
