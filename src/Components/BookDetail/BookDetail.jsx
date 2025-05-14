@@ -7,22 +7,22 @@ const BookDetail = () => {
     const id = parseInt(bookId)
     const bookDetails = useLoaderData();
     const book = bookDetails.find(book => book.bookId === id)
-
+    const { author, image, bookName ,category,review} = book
     return (
         <div>
-            <div className="hero bg-base-200 min-h-screen">
-                <div className="hero-content flex-col lg:flex-row">
+            <div className="hero mt-10 mb-10 bg-base-200 min-h-180">
+                <div className="hero-content gap-10 flex-col lg:flex-row md:flex-row">
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-                        className="max-w-sm rounded-lg shadow-2xl"
+                        src={image}
+                        className="max-w-sm w-300 rounded-lg shadow-2xl"
                     />
                     <div>
-                        <h1 className="text-5xl font-bold">Box Office News!</h1>
-                        <p className="py-6">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
-                        </p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <h1 className="md:text-5xl text-2xl font-bold">{bookName}</h1>
+                        <p className="md:text-2xl text-xl">By : {author}</p>
+                        <div className="divider"></div>
+                        <p className="md:text-2xl text-xl">{category}</p>
+                         <div className="divider"></div>
+                        <p className="py-6 text-justify md:text-2xl text-xl"><span className="font-bold">Review :</span> {review}</p>
                     </div>
                 </div>
             </div>
