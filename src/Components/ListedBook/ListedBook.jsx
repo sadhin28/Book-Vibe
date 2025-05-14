@@ -1,7 +1,8 @@
 import { MdContactPage } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const ListedBook = ({data}) => {
-    const {image,bookName,category,author,rating,tags,totalPages}=data
+    const {image,bookName,category,author,rating,tags,totalPages,bookId}=data
     return (
         <div className='border border-gray-300 bg-[1px card	Inside
 #13131326]'>
@@ -27,7 +28,8 @@ const ListedBook = ({data}) => {
                 <div className="grid grid-cols-2 gap-5 md:flex ">
                      <button  className="bg-[#328EFF26] rounded-[30px] text-[16px] text-[#328EFF] w-[125px] h-[33px]">Category : {category}</button>
                      <button  className="bg-[#FFAC3326] rounded-[30px] text-[16px] text-[#FFAC33] w-[125px] h-[33px]">Rating: {rating}</button>
-                     <button  className="bg-[#23BE0A] rounded-[30px] text-[16px] text-white w-[125px] h-[33px]">View Details</button>
+                     <Link to={`book/${bookId}`}> <button  className="bg-[#23BE0A] rounded-[30px] text-[16px] text-white w-[125px] h-[33px]">View Details</button></Link>
+                    
                 </div>
                </div>
                
