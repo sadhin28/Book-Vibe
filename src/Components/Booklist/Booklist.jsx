@@ -35,8 +35,8 @@ const Booklist = () => {
     
     return (
         <div className='mb-10'>
-            <h1 className='text-center font-bold text-3xl mt-5'>Listed Books : {readlist.length}</h1>
-            <Tabs>
+           
+            <Tabs className="mt-5">
                 <TabList className='font-bold'>
                     <Tab>Wishlist Books</Tab>
                     <Tab>Wishlist Books</Tab>
