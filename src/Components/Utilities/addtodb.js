@@ -15,7 +15,7 @@ const addToStoredReadList=(id)=>{
     const storedList = getStoredReadList();
     if(storedList.includes(id)){
 
-        toast.error(`This Book alrady exists in the read list`)
+        toast.error(`This Book alrady exists in the read List`)
     }
     else{
         storedList.push(id);
@@ -40,13 +40,13 @@ const addToStoredwishesList=(id)=>{
     const storedList =  getStoredwhishesList();
     if(storedList.includes(id)){
 
-        toast.error(`This Book alrady exists in the read list`)
+        toast.error(`This Book alrady exists in the wishList`)
     }
     else{
         storedList.push(id);
         const storedListstr = JSON.stringify(storedList);
         localStorage.setItem('whish-list',storedListstr)
-        toast.success('Listed The Book')
+        toast.success('Wishes The Book')
     }
 }
 

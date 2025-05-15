@@ -5,6 +5,7 @@ import 'react-tabs/style/react-tabs.css';
 import { getStoredReadList, getStoredwhishesList } from '../Utilities/addtodb';
 import Book from '../Book/Book';
 import ListedBook from '../ListedBook/ListedBook';
+import WishList from '../WishList/WishList';
 
 const Booklist = () => {
     const deletelocalStore=()=>{
@@ -12,20 +13,22 @@ const Booklist = () => {
     }
     const [readlist, setredlist] = useState([])
     const allBooks = useLoaderData()
-    const [wishes,setwishes]=useState()
+    const [wishes,setwishes]=useState([])
+    
     useEffect(() => {
         const storeReadlist = getStoredReadList();
         const storedListint = storeReadlist.map(id => parseInt(id));
         const booklist = allBooks.filter(book => storedListint.includes(book.bookId))
         setredlist(booklist)
           
-    }, [])
-    useEffect(()=>{
-         const storewishes = getStoredwhishesList();
+        const storewishes = getStoredwhishesList();
+         
          const storewishesInt = storewishes.map(id=> parseInt(id));
          const wishesbookList = allBooks.filter(book=>storewishesInt.includes(book.bookI))
+         console.log(wishesbookList)
          setwishes(wishesbookList)
-    },[])
+    }, [])
+    
     return (
         <div className='mb-10'>
             <h1 className='text-center font-bold text-3xl mt-5'>Listed Books : {readlist.length}</h1>
@@ -46,9 +49,11 @@ const Booklist = () => {
                     </div>
                 </TabPanel>
                 <TabPanel className="mt-10">
-                      {
-
-                      }
+                      <div>
+                          {
+                            wishes.map(data=><WishList></WishList>)
+                          }
+                      </div>
                 </TabPanel>
             </Tabs>
             <button onClick={deletelocalStore} className='btn mt-5 hover:bg-[#23BE0A] hover:text-white'>Clean Read Book</button>
