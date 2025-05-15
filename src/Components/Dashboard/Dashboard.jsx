@@ -1,7 +1,8 @@
 
 import { useLoaderData } from "react-router-dom";
 import './Dashboard.css'
-import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, PieChart, } from 'recharts';
+import Piechart from "../Piechart/Piechart";
 const Dashboard = () => {
     const getPath = (x, y, width, height) => (
         `M${x},${y + height}
@@ -22,24 +23,29 @@ const Dashboard = () => {
         return <text x={x + width / 2} y={y} fill="#666" textAnchor="middle" dy={-10}>{`${value}`}</text>;
     };
     const data = useLoaderData()
-
+   
+       
+       
+    
     return (
         <div className="mb-10 mt-10">
-           <h1 className="text-center font-bold text-2xl">Total Pages Bar Chart</h1>
+            <h1 className="text-center md:mb-10 font-bold text-2xl">Total Pages Bar Chart</h1>
             <div className="flex px-5 ">
-                <BarChart className="mx-auto"  data={data}
+                <BarChart className="mx-auto" data={data}
                     barGap={70}
                     width={800} height={500}
-                   
-                    >
+
+                >
                     <XAxis className="font-bold " dataKey="bookName"></XAxis>
                     <YAxis dataKey="" />
                     <CartesianGrid stroke="#ccc" />
-                    
-                    <Bar shape={TriangleBar} dataKey="totalPages" fill="#93C837FF"  label={renderCustomBarLabel} barGap={50}></Bar>
+
+                    <Bar shape={TriangleBar} dataKey="totalPages" fill="#93C837FF" label={renderCustomBarLabel} barGap={50}></Bar>
 
                 </BarChart>
             </div>
+             
+            <Piechart data={data}></Piechart>
 
         </div>
     );
