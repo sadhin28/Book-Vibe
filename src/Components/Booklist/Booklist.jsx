@@ -53,7 +53,7 @@ const Booklist = () => {
                     </div>
                 </TabPanel>
                 <TabPanel className="mt-10">
-                      <div>
+                      <div className='px-2 grid gap-5'>
                           {
                             wishes.map(data=><WishList data={data} key={data.bookId}></WishList>)
                           }

@@ -2,7 +2,7 @@
 const WishList = ({data}) => {
     const {image,bookName,category,author,rating,tags,totalPages,bookId}=data
     return (
-        <div className=" p-4 gap-10 card border border-amber-100 bg-gray-100">
+        <div className=" p-4 gap-10 card border border-gray-300 bg-gray-100">
             
             <div className="flex  gap-5 md:gap-20 items-center">
                 <img className="h-50 w-40 rounded-2xl" src={image} alt="" />
