@@ -12,7 +12,7 @@ const WishList = ({data}) => {
                  </div>
                 <div className="flex items-center gap-2" >
                     <h1 className="font-bold text-2xl">Tags: </h1>
-                    <div className="flex gap-2 items-center text-center ">
+                    <div className="grid md:flex gap-2 items-center text-center ">
                          {
                          tags.map(tag=><p className="px-2 border bg-amber-200 rou rounded-3xl">#{tag}</p>)
                        }
