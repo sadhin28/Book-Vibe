@@ -28,7 +28,7 @@ const Dashboard = () => {
        
     
     return (
-        <div className="mb-10 mt-10">
+        <div className=" mt-10">
             <h1 className="text-center md:mb-10 font-bold text-2xl">Total Pages Bar Chart</h1>
             <div className="flex px-5 ">
                 <BarChart className="mx-auto" data={data}
