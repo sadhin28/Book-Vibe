@@ -1,7 +1,7 @@
 
 import { useLoaderData } from "react-router-dom";
-
-import { BarChart, Bar, XAxis, YAxis,Tooltip, ResponsiveContainer, CartesianGrid,  } from 'recharts';
+import './Dashboard.css'
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, } from 'recharts';
 const Dashboard = () => {
     const getPath = (x, y, width, height) => (
         `M${x},${y + height}
@@ -19,38 +19,28 @@ const Dashboard = () => {
     };
 
     const renderCustomBarLabel = ({ x, y, width, value }) => {
-        return <text x={x + width / 2} y={y} fill="#666" textAnchor="middle" dy={-6}>{`Pages: ${value}`}</text>;
+        return <text x={x + width / 2} y={y} fill="#666" textAnchor="middle" dy={-10}>{`${value}`}</text>;
     };
     const data = useLoaderData()
 
     return (
-        <div className=" mt-20 mb-20">
-            
-                <div id="bar1" className="">
-                    <BarChart data={data}
-                 width={400} height={400}
-                  margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
-                    <XAxis dataKey="bookName"></XAxis>
-                     <YAxis />
-                      <CartesianGrid stroke="#ccc" />
-                        <Tooltip />
-                         <Bar dataKey="totalPages" barSize={40}></Bar>
+        <div className=" mt-20 mb-20 ">
+
+            <div className="flex px-5 ">
+                <BarChart className="mx-auto"  data={data}
+                    barGap={70}
+                    width={1200} height={500}
+                   
+                    >
+                    <XAxis dataKey="image"></XAxis>
+                    <YAxis />
+                    <CartesianGrid stroke="#ccc" />
+                    <Tooltip />
+                    <Bar shape={TriangleBar} dataKey="totalPages" fill="#93C837FF"  label={renderCustomBarLabel} barGap={50}></Bar>
 
                 </BarChart>
-                </div>
-                <div>
-                    <BarChart data={data}
-                 width={400} height={400}
-                  margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
-                    <XAxis dataKey="bookName"></XAxis>
-                     <YAxis />
-                      <CartesianGrid stroke="#ccc" />
-                        <Tooltip />
-                         <Bar dataKey="totalPages" barSize={40}></Bar>
+            </div>
 
-                </BarChart>
-                </div>
-          
         </div>
     );
 };
