@@ -24,12 +24,12 @@ const Dashboard = () => {
     const data = useLoaderData()
 
     return (
-        <div className=" mt-20 mb-20 ">
+        <div className="mb-10 mt-10">
 
             <div className="flex px-5 ">
                 <BarChart className="mx-auto"  data={data}
                     barGap={70}
-                    width={1200} height={500}
+                    width={800} height={500}
                    
                     >
                     <XAxis className="flex font-bold" dataKey="bookName"></XAxis>
