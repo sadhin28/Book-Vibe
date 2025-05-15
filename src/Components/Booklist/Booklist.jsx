@@ -56,7 +56,7 @@ const Booklist = () => {
 
             <Tabs className="mt-5  ">
                 <TabList className='font-bold text-xl '>
-                    <Tab>Readlish Books</Tab>
+                    <Tab>Readlisht Books</Tab>
                     <Tab>Wishlist Books</Tab>
                 </TabList>
 
