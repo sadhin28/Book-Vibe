@@ -25,4 +25,29 @@ const addToStoredReadList=(id)=>{
     }
 }
 
-export {addToStoredReadList,getStoredReadList}
+const getStoredwhishesList =()=>{
+    const storedListr=localStorage.getItem('whish-list')
+    if(storedListr){
+        const storedList = JSON.parse(storedListr);
+        return storedList;
+    }
+    else{
+        return [];
+    }
+}
+
+const addToStoredwishesList=(id)=>{
+    const storedList =  getStoredwhishesList();
+    if(storedList.includes(id)){
+
+        toast.error(`This Book alrady exists in the read list`)
+    }
+    else{
+        storedList.push(id);
+        const storedListstr = JSON.stringify(storedList);
+        localStorage.setItem('whish-list',storedListstr)
+        toast.success('Listed The Book')
+    }
+}
+
+export {addToStoredReadList,getStoredReadList,addToStoredwishesList,getStoredwhishesList}
