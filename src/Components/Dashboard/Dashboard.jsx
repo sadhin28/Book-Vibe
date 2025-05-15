@@ -32,7 +32,7 @@ const Dashboard = () => {
                     width={1200} height={500}
                    
                     >
-                    <XAxis dataKey="image"></XAxis>
+                    <XAxis className="flex font-bold" dataKey="bookName"></XAxis>
                     <YAxis />
                     <CartesianGrid stroke="#ccc" />
                     <Tooltip />
