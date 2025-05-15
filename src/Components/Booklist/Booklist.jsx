@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { NavLink, useLoaderData } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { getStoredReadList, getStoredwhishesList } from '../Utilities/addtodb';
@@ -54,9 +54,9 @@ const Booklist = () => {
         <div className='mb-10'>
             
 
-            <Tabs className="mt-5">
-                <TabList className='font-bold'>
-                    <Tab>Wishlist Books</Tab>
+            <Tabs className="mt-5  ">
+                <TabList className='font-bold text-xl '>
+                    <Tab>Readlish Books</Tab>
                     <Tab>Wishlist Books</Tab>
                 </TabList>
 
