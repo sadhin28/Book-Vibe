@@ -24,7 +24,7 @@ const ListedBook = ({data}) => {
                     <p>Pages: {totalPages}</p>
                 </div>
                 
-                <div className='divider'></div>
+                <div className='divider w-full'></div>
                 <div className="grid grid-cols-2 gap-5 md:flex ">
                      <button  className="bg-[#328EFF26] rounded-[30px] text-[16px] text-[#328EFF] w-[125px] h-[33px]">Category : {category}</button>
                      <button  className="bg-[#FFAC3326] rounded-[30px] text-[16px] text-[#FFAC33] w-[125px] h-[33px]">Rating: {rating}</button>

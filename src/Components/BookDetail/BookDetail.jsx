@@ -12,6 +12,7 @@ const BookDetail = () => {
            addToStoredReadList(id);
     }
     const handelWhishes =(id)=>{
+        
         addToStoredwishesList(id)
     }
     return (
