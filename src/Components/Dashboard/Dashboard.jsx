@@ -1,7 +1,7 @@
 
 import { useLoaderData } from "react-router-dom";
 
-import { BarChart, Bar, XAxis, YAxis,Tooltip } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis,Tooltip, ResponsiveContainer, CartesianGrid,  } from 'recharts';
 const Dashboard = () => {
     const getPath = (x, y, width, height) => (
         `M${x},${y + height}
@@ -24,16 +24,33 @@ const Dashboard = () => {
     const data = useLoaderData()
 
     return (
-        <div className="">
+        <div className=" mt-20 mb-20">
+            
+                <div id="bar1" className="">
+                    <BarChart data={data}
+                 width={400} height={400}
+                  margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
+                    <XAxis dataKey="bookName"></XAxis>
+                     <YAxis />
+                      <CartesianGrid stroke="#ccc" />
+                        <Tooltip />
+                         <Bar dataKey="totalPages" barSize={40}></Bar>
 
-            <BarChart width={700} height={300} data={data}>
-                <XAxis dataKey="bookName" />
-                <YAxis />
-                <Tooltip></Tooltip>
-                <Bar  dataKey="totalPages" fill="#8884d8"
-                    shape={<TriangleBar />} label={renderCustomBarLabel} />
-            </BarChart>
+                </BarChart>
+                </div>
+                <div>
+                    <BarChart data={data}
+                 width={400} height={400}
+                  margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
+                    <XAxis dataKey="bookName"></XAxis>
+                     <YAxis />
+                      <CartesianGrid stroke="#ccc" />
+                        <Tooltip />
+                         <Bar dataKey="totalPages" barSize={40}></Bar>
 
+                </BarChart>
+                </div>
+          
         </div>
     );
 };
