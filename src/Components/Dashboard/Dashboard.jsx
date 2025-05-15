@@ -32,8 +32,8 @@ const Dashboard = () => {
                     width={800} height={500}
                    
                     >
-                    <XAxis className="flex font-bold" dataKey="bookName"></XAxis>
-                    <YAxis />
+                    <XAxis className="font-bold " dataKey="bookName"></XAxis>
+                    <YAxis dataKey="" />
                     <CartesianGrid stroke="#ccc" />
                     
                     <Bar shape={TriangleBar} dataKey="totalPages" fill="#93C837FF"  label={renderCustomBarLabel} barGap={50}></Bar>
