@@ -21,13 +21,17 @@ const Booklist = () => {
         const booklist = allBooks.filter(book => storedListint.includes(book.bookId))
         setredlist(booklist)
           
+        
+    }, [])
+    useEffect(()=>{
         const storewishes = getStoredwhishesList();
          
          const storewishesInt = storewishes.map(id=> parseInt(id));
-         const wishesbookList = allBooks.filter(book=>storewishesInt.includes(book.bookI))
-         console.log(wishesbookList)
-         setwishes(wishesbookList)
-    }, [])
+         console.log(storewishesInt)
+           const wishbook = allBooks.filter(book => storewishesInt.includes(book.bookId))
+           setwishes(wishbook)
+         
+    },[])
     
     return (
         <div className='mb-10'>
@@ -51,7 +55,7 @@ const Booklist = () => {
                 <TabPanel className="mt-10">
                       <div>
                           {
-                            wishes.map(data=><WishList></WishList>)
+                            wishes.map(data=><WishList data={data} key={data.bookId}></WishList>)
                           }
                       </div>
                 </TabPanel>

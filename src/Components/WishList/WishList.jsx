@@ -1,8 +1,10 @@
 
-const WishList = () => {
+const WishList = ({data}) => {
+    const datas = localStorage.getItem('whish-list')
+    console.log(datas)
     return (
         <div>
-            <h1>WishList</h1>
+            <img src={data.image} alt="" />
         </div>
     );
 };
