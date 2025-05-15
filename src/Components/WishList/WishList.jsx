@@ -1,6 +1,6 @@
 
 const WishList = ({data}) => {
-    const {image,bookName,category,author,rating,tags,totalPages,bookId}=data
+    const {image,bookName,category,tags}=data
     return (
         <div className=" p-4 gap-10 card border border-gray-300 bg-gray-100">
             
