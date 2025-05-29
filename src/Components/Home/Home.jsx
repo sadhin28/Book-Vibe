@@ -2,8 +2,10 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import Books from "../Books/Books";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
+
     const [bookData,setBookdata]=useState([])
    
     const data = useLoaderData();
@@ -12,6 +14,9 @@ const Home = () => {
     },[])
     return (
         <div className="">
+            <Helmet>
+                <title>Book Vibe | Home</title>
+            </Helmet>
            <div className="mt-10 mb-20">
                 <Banner></Banner>
            </div>

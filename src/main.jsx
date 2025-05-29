@@ -17,6 +17,7 @@ import SignIn from './Components/SignIn/SignIn.jsx';
 import SignUp from './Components/SignUp/SignUp.jsx';
 import BookDetail from './Components/BookDetail/BookDetail.jsx';
 import { ToastContainer } from 'react-toastify';
+import { HelmetProvider } from 'react-helmet-async';
   
 
 const router = createBrowserRouter([
@@ -67,10 +68,10 @@ createRoot(document.getElementById('root')).render(
 
 
     <StrictMode>
-       
-              <RouterProvider router={router} />
+          <HelmetProvider>
+             <RouterProvider router={router} />
              <ToastContainer  position='top-center'/>
-      
+          </HelmetProvider>  
  </StrictMode>
 
 )
