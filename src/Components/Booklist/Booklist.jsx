@@ -6,6 +6,7 @@ import { getStoredReadList, getStoredwhishesList } from '../Utilities/addtodb';
 import Book from '../Book/Book';
 import ListedBook from '../ListedBook/ListedBook';
 import WishList from '../WishList/WishList';
+import { Helmet } from 'react-helmet-async';
 
 const Booklist = () => {
     const deletelocalStore = () => {
@@ -52,7 +53,9 @@ const Booklist = () => {
     }
     return (
         <div className='mb-10'>
-            
+             <Helmet>
+                <title>Book Vibe | ListedBook</title>
+             </Helmet>
 
             <Tabs className="mt-5  ">
                 <TabList className='font-bold text-xl '>
