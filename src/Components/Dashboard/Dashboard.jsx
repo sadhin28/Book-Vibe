@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import './Dashboard.css'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, PieChart, } from 'recharts';
 import Piechart from "../Piechart/Piechart";
+import { Helmet } from "react-helmet-async";
 const Dashboard = () => {
     const getPath = (x, y, width, height) => (
         `M${x},${y + height}
@@ -23,12 +24,15 @@ const Dashboard = () => {
         return <text x={x + width / 2} y={y} fill="#666" textAnchor="middle" dy={-10}>{`${value}`}</text>;
     };
     const data = useLoaderData()
-   
-       
-       
-    
+
+
+
+
     return (
         <div className=" mt-10">
+            <Helmet>
+                <title>Book Vibe | Statistics</title>
+            </Helmet>
             <h1 className="text-center md:mb-10 font-bold text-2xl">Total Pages Bar Chart</h1>
             <div className="flex px-5 ">
                 <BarChart className="mx-auto" data={data}
@@ -44,7 +48,7 @@ const Dashboard = () => {
 
                 </BarChart>
             </div>
-             
+
             <Piechart data={data}></Piechart>
 
         </div>
