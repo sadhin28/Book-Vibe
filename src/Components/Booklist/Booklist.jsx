@@ -54,7 +54,7 @@ const Booklist = () => {
     return (
         <div className='mb-10'>
              <Helmet>
-                <title>Book Vibe | ListedBook</title>
+                <title>Book Vibe | ListedBooks</title>
              </Helmet>
 
             <Tabs className="mt-5  ">
