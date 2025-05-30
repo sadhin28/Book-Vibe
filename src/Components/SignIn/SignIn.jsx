@@ -24,8 +24,11 @@ const SignIn = () => {
               {
                     user && 
                     <div>
+                         <img className="mx-auto w-20 h-20 rounded-full" src={user.photoURL} alt="" />
                         <h1>Name : {user.displayName}</h1>
                         <p>Email : {user.email}</p>
+                      
+                   
                     </div>
                 }
                
