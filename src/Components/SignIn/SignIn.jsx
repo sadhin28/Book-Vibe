@@ -1,28 +1,34 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import { signInWithPopup } from "firebase/auth";
 import auth from "../firebaseAuth";
+import { useState } from "react";
 
 const SignIn = () => {
+    const [user,setuser]=useState(null)
     const provider =new GoogleAuthProvider()
     const handelGoogleLogin=()=>{
             signInWithPopup(auth,provider)
             .then((result)=>{
                  console.log(result)
+                 setuser(result.user)
             })
             .catch(error=>{
+                setuser(null);
                 console.log('Error',error)
             })
     }
     return (
         <div className="hero bg-base-200 min-h-screen">
+               
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Login now!</h1>
-                    <p className="py-6">
-                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                        quasi. In deleniti eaque aut repudiandae et a id nisi.
-                    </p>
-                </div>
+              {
+                    user && 
+                    <div>
+                        <h1>Name : {user.displayName}</h1>
+                        <p>Email : {user.email}</p>
+                    </div>
+                }
+               
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <div className="card-body">
                         <fieldset className="fieldset">
